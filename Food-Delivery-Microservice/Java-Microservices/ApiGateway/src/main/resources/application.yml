@@ -1,0 +1,78 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: API-GATEWAY
+
+
+
+
+  cloud:
+   gateway:
+       routes:
+         - id: CUSTOMERSERVICE
+           uri: lb://CUSTOMERSERVICE
+           predicates:
+             - Path=/api/customer/**
+           filters:
+             - AuthenticationFilter
+
+         - id: MENUSERVICE
+           uri: lb://MENUSERVICE
+           predicates:
+               - Path=/api/menu/**,/api/dish/**
+           filters:
+               - AuthenticationFilter
+
+         - id: RESTAURANTSERVICE
+           uri: lb://RESTAURANTSERVICE
+           predicates:
+               - Path=/api/restaurant/**
+           filters:
+               - AuthenticationFilter
+
+         - id: DELIVERYSERVICE
+           uri: lb://DELIVERYSERVICE
+           predicates:
+               - Path=/api/delivery/**
+           filters:
+             - AuthenticationFilter
+
+
+         - id: DELIVERYAGENTSERVICE
+           uri: lb://DELIVERYAGENTSERVICE
+           predicates:
+               - Path=/api/agent/
+           filters:
+             - AuthenticationFilter
+
+
+         - id: ORDERSERVICE
+           uri: lb://ORDERSERVICE
+           predicates:
+               - Path=/api/orders/**
+           filters:
+             - AuthenticationFilter
+
+         - id: REVIEWSERVICE
+           uri: lb://REVIEWSERVICE
+           predicates:
+               - Path=/api/review/**
+           filters:
+             - AuthenticationFilter
+
+
+         - id: AUTHENTICATIONSERVICE
+           uri: lb://AUTHENTICATIONSERVICE
+           predicates:
+             - Path=/api/auth/**
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+
+
+

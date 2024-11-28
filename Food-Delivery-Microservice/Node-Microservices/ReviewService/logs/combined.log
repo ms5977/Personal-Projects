@@ -1,0 +1,4 @@
+2024-11-28 13:49:38 [[32minfo[39m]: [32mReceived request to fetch all reviews[39m
+2024-11-28 13:49:38 [[32minfo[39m]: [32mFetched 3 reviews[39m
+2024-11-28 13:50:05 [[32minfo[39m]: [32mReceived request to create a review[39m
+2024-11-28 13:50:05 [[31merror[39m]: [31mError creating review: Failed to create review: [39m

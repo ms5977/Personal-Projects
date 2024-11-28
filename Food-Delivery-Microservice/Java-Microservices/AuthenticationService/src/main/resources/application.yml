@@ -1,0 +1,23 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: AUTHENTICATIONSERVICE
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/Authentication-Service
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka

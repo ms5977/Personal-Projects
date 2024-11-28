@@ -1,0 +1,31 @@
+/* App.css */
+.App {
+  background: linear-gradient(135deg, #1d232c, #281242c9);
+  color: #f0f0f0; /* Light Gray text to contrast with the dark background */
+  min-height: 100vh;
+}
+.ccc {
+  background: linear-gradient(135deg, #1d232c, #281242c9);
+  color: #e6dcdc;
+}
+.text-white {
+  color: #ffffff !important;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.loginPage {
+  background: linear-gradient(135deg, #757e8b, #d4d1d8c9);
+  color: #e6dcdc;
+}
+Label {
+  font-weight: bolder;
+  font-size: 20;
+  color: #1b1e41f6;
+  font-style: oblique;
+}
+/* .forCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
