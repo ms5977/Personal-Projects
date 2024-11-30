@@ -1,4 +1,4 @@
-# CRM System
+# CRM Application
 
 A Customer Relationship Management (CRM) system designed to manage customer data and interactions. The application features distinct panels for admins and employees, allowing efficient employee and product management. It also includes a follow-up tracking system to help employees schedule and manage customer follow-ups.
 
